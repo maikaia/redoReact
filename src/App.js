@@ -1,23 +1,16 @@
 import "./App.css";
+import {Routes, Route} from "react-router-dom"
+import LoginPage from "./pages/LoginPage";
+import HomePage from "./pages/HomePage";
+
 
 function App() {
   return (
-    <div class="container">
-      <div class="login App">
-        <h1>Sign In</h1>
-        <form>
-          <label>
-            <p class="loginLabels">E-mail</p>
-            <input class="input" placeholder="E-mail" />
-          </label>
-          <label>
-            <p class="loginLabels">Password</p>
-            <input class="input" placeholder="Password" />
-          </label>
-          <br />
-          <button class="signInButton">Sign In</button>
-        </form>
-      </div>
+    <div>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/home" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
